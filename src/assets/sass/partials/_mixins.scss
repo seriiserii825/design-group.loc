@@ -1,0 +1,61 @@
+/*----------  em  ----------*/
+$browser-context: 16;
+
+@function em($pixels, $context: $browser-context) {
+  @return ($pixels / $context) * 1em;
+}
+
+
+/* fonts
+====================================================*/
+/*@mixin opensans {
+  font-family: "OpenSans", sans-serif;
+}*/
+
+/*@mixin opensansbold {
+  font-family: "OpenSansBold", sans-serif;
+}*/
+
+/*@mixin roboto {
+  font-family: "RobotoRegular", sans-serif;
+}*/
+
+/* @mixin robotobold {
+  font-family: "RobotoBold", sans-serif;
+} */
+
+/*@mixin robotocondensed {
+  font-family: "RobotoCondensed", sans-serif;
+}*/
+
+/*@mixin bebasregular {
+  font-family: "BebasRegular", sans-serif;
+}*/
+
+/* @mixin badscriptregular {
+  font-family: "BadScriptRegular", sans-serif;
+} */
+
+/* @mixin cleanvertisinglight {
+  font-family: "CleanvertisingLight", sans-serif;
+} */
+
+/*@mixin monsseratbold {
+  font-family: "MonserratBold", sans-serif;
+}*/
+
+@mixin birchstd {
+  font-family: "Birch-Std", sans-serif;
+}
+
+@mixin timesNewsRoman {
+  font-family: "Times New Roman", sans-serif;
+}
+
+
+/*mixins*/
+@mixin inline-block {
+  display: inline-block;
+  vertical-align: top;
+}
+

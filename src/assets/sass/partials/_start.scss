@@ -1,0 +1,61 @@
+@import "../../../bourbon/bourbon";
+@import "../sass/partials/fonts";
+@import "../sass/partials/iconmoon";
+@import "../../../node_modules/bootstrap/scss/bootstrap-grid";
+@import "../sass/partials/variables";
+@import "../sass/partials/mixins";
+//@import "../sass/partials/icons";
+
+body {
+  @include timesNewsRoman;
+  font-size: 17px;
+  line-height: 1.2;
+  color: $text-color;
+  background: url("../i/body-bg.jpg") repeat center;
+  margin-bottom: 200px;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+a,
+a:hover,
+a:focus,
+a:active {
+  text-decoration: none;
+}
+
+.btn,
+a.btn {
+  @include inline-block;
+}
+
+input {
+  &:focus,
+  &:active,
+  &:hover {
+    outline: none;
+  }
+
+  text-indent: 15px;
+}
+
+button {
+  &:focus,
+  &:active,
+  &:hover {
+    outline: none;
+  }
+}
