@@ -36,4 +36,46 @@ $(function(){
         pauseOnHover: false
     });
 
+    /* smooth scroll to up
+    ====================================================*/
+    $('#js-btn-up').on('click', function(){
+        $('html, body').animate({
+            scrollTop: 0
+        }, 2600);
+
+        let audio = addAudio();
+
+        if($(document).scrollTop() > 0){
+            $('body').append(audio);
+        }
+
+    });
+
+    function addAudio(){
+        let audio = document.createElement('audio');
+        audio.setAttribute('autoplay', 'autoplay');
+        let source = document.createElement('source');
+        source.setAttribute('src', 'assets/audio/up.mp3');
+        source.setAttribute('type', 'audio/mpeg');
+
+        audio.appendChild(source);
+
+        return audio;
+    }
+
+    let documentHeight = $(document).height();
+
+    $(document).on('scroll', function(){
+
+        if($(this).scrollTop() < documentHeight/3){
+            $('#js-btn-up').addClass('disabled');
+        }else {
+            $('#js-btn-up').removeClass('disabled');
+        }
+
+        if($(this).scrollTop() === 0){
+            $('audio').remove();
+        }
+    });
+
 });

@@ -319,6 +319,13 @@ gulp.task('sprites', function () {
         .pipe(gulp.dest("src/assets/i/sprite-svg-img/"));
 });
 
+/*audio
+ ===============================*/
+gulp.task('audio', function () {
+    return gulp.src('src/assets/audio/**/*.*')
+        .pipe(gulp.dest("build/assets/audio/"))
+});
+
 /* build
 ====================================================*/
 gulp.task('build', function(cb){
@@ -333,9 +340,12 @@ gulp.task('build', function(cb){
         "js:build",
         "fonts:build",
         "image:build",
-        "home-scss"
+        "home-scss",
+        "audio"
         , cb);
 });
+
+
 
 /* watch
 ====================================================*/

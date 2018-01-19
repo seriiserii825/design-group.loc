@@ -135,7 +135,7 @@ h6 {
     text-align: center;
 
     @media screen and (max-width: $lg) {
-      margin-bottom: 100px;
+      margin-bottom: 60px;
     }
 
     &::after {
@@ -167,12 +167,18 @@ h6 {
 /* portfolio
 ====================================================*/
 .portfolio {
+  margin-bottom: 60px;
   padding: 40px 20px;
   background: $white;
+  border-radius: 10px;
+
+  @media screen and (max-width: $lg) {
+    padding-bottom: 0;
+  }
 
   &__item {
     @media screen and (max-width: $lg) {
-      margin-bottom: 60px;
+      margin-bottom: 40px;
     }
   }
 
@@ -230,4 +236,128 @@ h6 {
     }
   }
 
+}
+
+/* end portfolio
+====================================================*/
+
+/* blog
+====================================================*/
+.blog {
+  padding: 40px 20px;
+  margin-bottom: 60px;
+  border-radius: 10px;
+  color: $text-super-light;
+  background: $gray-dark;
+
+  @media screen and (max-width: $lg) {
+    padding-bottom: 0;
+  }
+
+  &__item {
+    @media screen and (max-width: $lg) {
+      margin-bottom: 60px;
+    }
+  }
+
+  &__title {
+    margin-bottom: 15px;
+    font-size: 30px;
+  }
+
+  &__list-item {
+    display: flex;
+    padding: 10px 0;
+    border-bottom: 1px solid $border-color;
+  }
+
+  .fa {
+    margin-right: 10px;
+    color: $blue;
+  }
+}
+
+/* end portfolio
+====================================================*/
+
+/* footer-main
+====================================================*/
+.footer-main {
+  padding: 60px 0;
+  text-align: center;
+  background: transparent;
+  border-top: 1px solid lighten($border-color, 20%);
+}
+
+.footer-menu {
+  margin-bottom: 30px;
+
+  @media screen and (max-width: $md) {
+    text-align: left;
+  }
+
+  &__item {
+    display: inline-block;
+    vertical-align: top;
+
+    @media screen and (max-width: $md) {
+      display: block;
+      margin-bottom: 20px;
+    }
+  }
+
+  &__link {
+    position: relative;
+    padding: 20px;
+    color: $text-color;
+    transition: all .5s ease;
+
+    &:hover {
+      color: $accent;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      right: -5px;
+      transform: translateY(-50%);
+      width: 10px;
+      height: 10px;
+      background: $white;
+      border: 1px solid $gray-light;
+      border-radius: 50%;
+    }
+  }
+}
+
+/* end footer-main
+====================================================*/
+.btn-up {
+  position: fixed;
+  bottom: 40px;
+  right: 8%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 60px;
+  font-size: 1.4em;
+  color: red;
+  border: 1px solid #a1a1a1;
+  background-color: $gray-dark;
+  border-radius: 50%;
+  box-shadow: 0 0 10px 0 rgba(0,0,0,.5);
+  transition: all 1s ease;
+
+  &.disabled {
+    opacity: 0;
+  }
+
+  &:hover {
+    color: green;
+    transform: rotate(-180deg);
+    box-shadow: none;
+    cursor: pointer;
+  }
 }
