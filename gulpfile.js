@@ -374,6 +374,9 @@ gulp.task("watch", function(){
     watch([path.watch.fonts], function(event, cb){
         gulp.start("fonts:build");
     });
+    watch('src/assets/audio/**/*.*', function(event, cb){
+        gulp.start("audio");
+    });
 });
 
 /* default
