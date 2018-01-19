@@ -78,22 +78,22 @@
 
                     <ul class="main-menu" id="js-main-menu">
                         <li class="main-menu__item">
-                            <a href="#" class="main-menu__link">Home</a>
+                            <a href="#js-main-menu" class="main-menu__link js-menu__link">Home</a>
                         </li>
                         <li class="main-menu__item">
-                            <a href="#" class="main-menu__link">About Us</a>
+                            <a href="#js-slider" class="main-menu__link js-menu__link">About Us</a>
                         </li>
                         <li class="main-menu__item">
-                            <a href="#" class="main-menu__link">Our Services</a>
+                            <a href="#js-our-services" class="main-menu__link js-menu__link">Our Services</a>
                         </li>
                         <li class="main-menu__item">
-                            <a href="#" class="main-menu__link">Portfolio</a>
+                            <a href="#js-portfolio" class="main-menu__link js-menu__link">Portfolio</a>
                         </li>
                         <li class="main-menu__item">
-                            <a href="#" class="main-menu__link">Blog</a>
+                            <a href="#js-blog" class="main-menu__link js-menu__link">Blog</a>
                         </li>
                         <li class="main-menu__item">
-                            <a href="#" class="main-menu__link">Contac Us</a>
+                            <a href="#js-footer-main" class="main-menu__link js-menu__link">Contac Us</a>
                         </li>
                     </ul>
                 </div>
@@ -126,7 +126,7 @@
         <!--our-services-->
         <div class="our-services" id="js-our-services">
             <div class="row">
-                <div class="col-lg-3 col-md-6 col-sm-12">
+                <div class="col-lg-3 col-md-6 col-sm-12 wow flipInY" data-wow-delay=".2s">
                     <div class="our-services__item">
                         <div class="img-wrap orange">
                             <i class="icon icon-big icon-pen"></i>
@@ -139,7 +139,7 @@
                         <a href="#" class="btn default">Read More</a>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6 col-sm-12">
+                <div class="col-lg-3 col-md-6 col-sm-12 wow flipInY" data-wow-delay=".5s">
                     <div class="our-services__item">
                         <div class="img-wrap blue">
                             <i class="icon icon-big icon-mouse"></i>
@@ -152,7 +152,7 @@
                         <a href="#" class="btn default">Read More</a>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6 col-sm-12">
+                <div class="col-lg-3 col-md-6 col-sm-12 wow flipInY" data-wow-delay="1s">
                     <div class="our-services__item">
                         <div class="img-wrap accent">
                             <i class="icon icon-big icon-settings"></i>
@@ -165,7 +165,7 @@
                         <a href="#" class="btn default">Read More</a>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6 col-sm-12">
+                <div class="col-lg-3 col-md-6 col-sm-12 wow flipInY" data-wow-delay="1.2s">
                     <div class="our-services__item">
                         <div class="img-wrap green">
                             <i class="icon icon-big icon-globe"></i>
@@ -182,9 +182,9 @@
         </div><!--portfolio-->
 
         <!--portfolio-->
-        <div class="portfolio">
+        <div class="portfolio" id="js-portfolio">
             <div class="row">
-                <div class="col-lg-4">
+                <div class="col-lg-4 wow fadeInLeftBig">
                     <div class="portfolio__item">
                         <h3 class="portfolio__title">Welcome!</h3>
                         <div class="portfolio__content">
@@ -201,7 +201,7 @@
                         <a href="#" class="btn lighten">More About Us</a>
                     </div>
                 </div>
-                <div class="col-lg-4">
+                <div class="col-lg-4 wow fadeInUpBig">
                     <div class="portfolio__item">
                         <h3 class="portfolio__title">Our Clients Say</h3>
                         <div class="portfolio__content">
@@ -222,7 +222,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4">
+                <div class="col-lg-4 wow fadeInRightBig">
                     <div class="portfolio__item">
                         <h3 class="portfolio__title">From The Blog</h3>
                         <div class="portfolio__content">
@@ -274,9 +274,9 @@
             </div>
         </div><!--portfolio-->
 
-        <div class="blog">
+        <div class="blog" id="js-blog">
             <div class="row">
-                <div class="col-lg-3 col-sm-6">
+                <div class="col-lg-3 col-sm-6  wow bounce">
                     <div class="blog__item">
                         <h3 class="blog__title">Latest Articles</h3>
                         <div class="blog__content">
@@ -299,7 +299,7 @@
                     </div>
                 </div>
 
-                <div class="col-lg-3 col-sm-6">
+                <div class="col-lg-3 col-sm-6 wow bounce">
                     <div class="blog__item">
                         <h3 class="blog__title">Archive</h3>
                         <div class="blog__content">
@@ -314,7 +314,7 @@
                     </div>
                 </div>
 
-                <div class="col-lg-3 col-sm-6">
+                <div class="col-lg-3 col-sm-6 wow bounce">
                     <div class="blog__item">
                         <h3 class="blog__title">Meta</h3>
                         <div class="blog__content">
@@ -329,7 +329,7 @@
                 </div>
 
 
-                <div class="col-lg-3 col-sm-6">
+                <div class="col-lg-3 col-sm-6 wow bounce">
                     <div class="blog__item">
                         <h3 class="blog__title">Categories</h3>
                         <div class="blog__content">
@@ -351,25 +351,25 @@
 
 <!--footer-->
 <div class="container">
-    <footer class="footer-main">
+    <footer class="footer-main" id="js-footer-main">
         <ul class="footer-menu">
             <li class="footer-menu__item">
-                <a href="#" class="footer-menu__link">Home</a>
+                <a href="#js-main-menu" class="footer-menu__link js-menu__link">Home</a>
             </li>
             <li class="footer-menu__item">
-                <a href="#" class="footer-menu__link">About us</a>
+                <a href="#js-slider" class="footer-menu__link js-menu__link">About us</a>
             </li>
             <li class="footer-menu__item">
-                <a href="#" class="footer-menu__link">Our Services</a>
+                <a href="#js-our-services" class="footer-menu__link js-menu__link">Our Services</a>
             </li>
             <li class="footer-menu__item">
-                <a href="#" class="footer-menu__link">Portfolio</a>
+                <a href="#js-portfolio" class="footer-menu__link js-menu__link">Portfolio</a>
             </li>
             <li class="footer-menu__item">
-                <a href="#" class="footer-menu__link">Blog</a>
+                <a href="#js-blog" class="footer-menu__link js-menu__link">Blog</a>
             </li>
             <li class="footer-menu__item">
-                <a href="#" class="footer-menu__link">Contact Us</a>
+                <a href="#js-footer-main" class="footer-menu__link js-menu__link">Contact Us</a>
             </li>
         </ul>
 
@@ -387,6 +387,7 @@
 <script src="assets/libs/jquery-migrate/jquery-migrate.min.js"></script>
 <script src="assets/libs/jquery-easy-scroll/jquery.easeScroll.js"></script>
 <script src="assets/libs/slick/slick.min.js"></script>
+<script src="assets/libs/wow/wow.min.js"></script>
 <script src="assets/js/main.js"></script>
 
 </body>

@@ -38,12 +38,32 @@ $(function(){
 
     /* smooth scroll to up
     ====================================================*/
+    /**
+     *
+     * @param cls {string}
+     * @param src {string}
+     * @param type {string}
+     * @returns {HTMLAudioElement}
+     */
+    function addAudio(cls, src, type){
+        let audio = document.createElement('audio');
+        audio.setAttribute('autoplay', 'autoplay');
+        audio.classList.add(cls);
+        let source = document.createElement('source');
+        source.setAttribute('src', src);
+        source.setAttribute('type', type);
+
+        audio.appendChild(source);
+
+        return audio;
+    }
+
     $('#js-btn-up').on('click', function(){
         $('html, body').animate({
             scrollTop: 0
-        }, 2600);
+        }, 3600);
 
-        let audio = addAudio();
+        let audio = addAudio('audio-up', 'assets/audio/up.mp3', 'audio/mpeg');
 
         if($(document).scrollTop() > 0){
             $('body').append(audio);
@@ -51,17 +71,6 @@ $(function(){
 
     });
 
-    function addAudio(){
-        let audio = document.createElement('audio');
-        audio.setAttribute('autoplay', 'autoplay');
-        let source = document.createElement('source');
-        source.setAttribute('src', 'assets/audio/up.mp3');
-        source.setAttribute('type', 'audio/mpeg');
-
-        audio.appendChild(source);
-
-        return audio;
-    }
 
     let documentHeight = $(document).height();
 
@@ -74,9 +83,50 @@ $(function(){
         }
 
         if($(this).scrollTop() === 0){
-            $('audio').remove();
+            $('.audio-up').remove();
         }
     });
+
+    /* smooth scroll to site blocks
+    ====================================================*/
+    $('.js-menu__link').on('click', function(e){
+        e.preventDefault();
+
+        let $this = $(this);
+        let href = $this.attr('href');
+        let menuOffsetTop = $(href).offset().top - 50;
+
+        $('html, body').animate({
+            scrollTop: menuOffsetTop
+        }, 1900);
+
+        let audioMenu = addAudio('audio-menu', 'assets/audio/button.mp3', 'audio/mpeg');
+
+        $('body').append(audioMenu);
+
+        setTimeout(function(){
+            $('.audio-menu').remove();
+        }, 2000);
+
+    });
+
+    /* animate
+    ====================================================*/
+    let wow = new WOW(
+        {
+            boxClass:     'wow',      // animated element css class (default is wow)
+            animateClass: 'animated', // animation css class (default is animated)
+            offset:       150,          // distance to the element when triggering the animation (default is 0)
+            mobile:       true,       // trigger animations on mobile devices (default is true)
+            live:         true,       // act on asynchronously loaded content (default is true)
+            callback:     function(box) {
+                // the callback is fired every time an animation is started
+                // the argument that is passed in is the DOM node being animated
+            },
+            scrollContainer: null // optional scroll container selector, otherwise use window
+        }
+    );
+    wow.init();
 
 });
 
