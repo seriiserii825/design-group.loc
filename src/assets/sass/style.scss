@@ -66,6 +66,7 @@ h6 {
 ====================================================*/
 .our-services {
   position: relative;
+  margin-bottom: 60px;
   padding-bottom: 40px;
 
   .col-md-6 {
@@ -161,4 +162,72 @@ h6 {
     font-style: italic;
     overflow: hidden;
   }
+}
+
+/* portfolio
+====================================================*/
+.portfolio {
+  padding: 40px 20px;
+  background: $white;
+
+  &__item {
+    @media screen and (max-width: $lg) {
+      margin-bottom: 60px;
+    }
+  }
+
+  &__title {
+    margin-bottom: 25px;
+    font-size: 45px;
+  }
+
+  &__message {
+    margin-bottom: 30px;
+    padding: 20px;
+    background: $gray-light;
+    border-radius: 10px;
+    box-shadow: inset 0 -4px 0 0 darken($gray-light, 10%);
+
+    .text {
+      font-style: italic;
+    }
+  }
+
+  .author {
+    display: table;
+    margin-left: auto;
+
+    &__name {
+      font-size: 1.1em;
+      font-weight: bold;
+    }
+  }
+
+  .blog-item {
+    margin-bottom: 20px;
+
+    &__title {
+      font-family: 'Times New Roman', sans-serif;
+      font-size: 18px;
+      line-height: 21px;
+      color: $accent;
+    }
+
+    li {
+      display: inline-block;
+      vertical-align: top;
+
+    }
+
+    .fa {
+      color: $blue;
+    }
+
+    &__data-item {
+      margin-right: 10px;
+      font-size: 15px;
+      font-weight: bold;
+    }
+  }
+
 }
