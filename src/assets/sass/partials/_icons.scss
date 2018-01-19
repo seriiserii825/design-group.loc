@@ -1,2 +1,32 @@
 @import "sprite";
 
+.icon {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.icon-big {
+  width: 50px;
+  height: 50px;
+}
+
+.icon-globe {
+   @include sprite($icon-1-globe);
+ }
+
+.icon-mouse {
+  @include sprite($icon-2-mouse);
+}
+
+.icon-pen {
+  @include sprite($icon-3-pen);
+}
+
+.icon-settings {
+  @include sprite($icon-4-settings);
+}
+
+
+
+
+

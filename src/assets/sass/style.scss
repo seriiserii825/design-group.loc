@@ -1,5 +1,164 @@
 @import "../libs/slick/slick";
-@import "partials/iconmoon";
+//@import "partials/iconmoon";
+@import "partials/icons";
 @import "../sass/partials/_start.scss";
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @include birchstd;
 
+  font-weight: normal;
+}
+
+.btn {
+  padding: 0 30px;
+  height: 40px;
+  line-height: 46px;
+  @include birchstd;
+  font-size: 24px;
+  text-transform: uppercase;
+  border-radius: 5px;
+  transition: all .5s ease;
+
+  &.default {
+    color: $white;
+    background: $gray-dark;
+
+    &:hover {
+      background: lighten($gray-dark, 10%);
+    }
+  }
+
+  &.lighten {
+    color: $text-color;
+    background: $gray-light;
+
+    &:hover {
+      background: darken($gray-light, 10%);
+    }
+  }
+}
+
+/* slider
+====================================================*/
+.slider {
+  margin: 0 auto;
+  padding: 60px 30px;
+  width: 100%;
+
+  /*&__item {
+    height: 400px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }*/
+}
+
+.slick-list {
+  box-shadow: 0 0 31px -10px rgba(0, 0, 0, .6);
+}
+
+/* our services
+====================================================*/
+.our-services {
+  position: relative;
+  padding-bottom: 40px;
+
+  .col-md-6 {
+    &:nth-child(2n) {
+      .our-services__item::after {
+        background: none;
+
+        @media screen and (min-width: $lg) {
+          background: $gray;
+        }
+      }
+    }
+  }
+
+  .col-lg-3 {
+    &:last-child {
+      .our-services__item::after {
+        background: none;
+      }
+    }
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: $gray;
+  }
+
+  .img-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 20px;
+    width: 96px;
+    height: 96px;
+    border-radius: 50%;
+
+    &.accent {
+      background: $accent;
+    }
+
+    &.blue {
+      background: $blue;
+    }
+
+    &.orange {
+      background: $orange;
+    }
+
+    &.green {
+      background: $green;
+    }
+
+    .icon {
+      line-height: 96px;
+    }
+  }
+
+  &__item {
+    position: relative;
+    padding: 0 15px;
+    text-align: center;
+
+    @media screen and (max-width: $lg) {
+      margin-bottom: 100px;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: -15px;
+      width: 1px;
+      height: 100%;
+      background: $gray;
+
+      @media screen and (max-width: $md) {
+        background: none;
+      }
+    }
+  }
+
+  &__title {
+    font-size: 40px;
+  }
+
+  .text {
+    height: 80px;
+    font-style: italic;
+    overflow: hidden;
+  }
+}
